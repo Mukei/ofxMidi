@@ -19,6 +19,10 @@ void testApp::setup(){
 //--------------------------------------------------------------
 void testApp::update(){
 	sprintf(msg,"value: %i, received from port: %i, id: %i \n\nwith %f milliseconds difference from last message",value,port,id,timestamp);
+    cout << "status " << status << endl;
+    cout << "byteOne " << byteOne << endl;
+    cout << "byteTwo " << byteTwo << endl;
+//    cout << "status " << status << endl;
 }
 
 //--------------------------------------------------------------
@@ -36,6 +40,10 @@ void testApp::newMidiMessage(ofxMidiEventArgs& eventArgs) {
 	id = eventArgs.channel;
 	port = eventArgs.port;
 	timestamp = eventArgs.timestamp;
+	status = eventArgs.status;
+	byteOne = eventArgs.byteOne;
+	byteTwo = eventArgs.byteTwo;
+	
 	
 	
 }

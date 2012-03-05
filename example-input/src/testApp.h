@@ -29,6 +29,11 @@ public:
 	int value;
 	double timestamp;
 	char msg[255];
+    
+    int channel;
+	int status;
+	int byteOne;
+	int byteTwo;
 	
 	// midi addon
 	ofxMidiIn	midiIn;
